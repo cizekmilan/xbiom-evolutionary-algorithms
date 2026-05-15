@@ -224,7 +224,7 @@ namespace XBIOM
             // lblTspSomVisualizationSpeed
             // 
             lblTspSomVisualizationSpeed.AutoSize = true;
-            lblTspSomVisualizationSpeed.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTspSomVisualizationSpeed.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
             lblTspSomVisualizationSpeed.Location = new Point(14, 286);
             lblTspSomVisualizationSpeed.Margin = new Padding(4, 0, 4, 0);
             lblTspSomVisualizationSpeed.Name = "lblTspSomVisualizationSpeed";
@@ -247,7 +247,7 @@ namespace XBIOM
             chkTspSomShowVisualization.AutoSize = true;
             chkTspSomShowVisualization.Checked = true;
             chkTspSomShowVisualization.CheckState = CheckState.Checked;
-            chkTspSomShowVisualization.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            chkTspSomShowVisualization.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
             chkTspSomShowVisualization.Location = new Point(366, 284);
             chkTspSomShowVisualization.Margin = new Padding(4, 3, 4, 3);
             chkTspSomShowVisualization.Name = "chkTspSomShowVisualization";
@@ -311,7 +311,7 @@ namespace XBIOM
             // lblTspSomElapsedTime
             // 
             lblTspSomElapsedTime.AutoSize = true;
-            lblTspSomElapsedTime.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            lblTspSomElapsedTime.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 238);
             lblTspSomElapsedTime.Location = new Point(116, 334);
             lblTspSomElapsedTime.Margin = new Padding(4, 0, 4, 0);
             lblTspSomElapsedTime.Name = "lblTspSomElapsedTime";
@@ -398,7 +398,7 @@ namespace XBIOM
             // lblTspSomTrainingCycles
             // 
             lblTspSomTrainingCycles.AutoSize = true;
-            lblTspSomTrainingCycles.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTspSomTrainingCycles.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
             lblTspSomTrainingCycles.Location = new Point(262, 34);
             lblTspSomTrainingCycles.Margin = new Padding(4, 0, 4, 0);
             lblTspSomTrainingCycles.Name = "lblTspSomTrainingCycles";
@@ -409,7 +409,7 @@ namespace XBIOM
             // lblTspSomCitiesCount
             // 
             lblTspSomCitiesCount.AutoSize = true;
-            lblTspSomCitiesCount.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTspSomCitiesCount.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
             lblTspSomCitiesCount.Location = new Point(17, 37);
             lblTspSomCitiesCount.Margin = new Padding(4, 0, 4, 0);
             lblTspSomCitiesCount.Name = "lblTspSomCitiesCount";
@@ -474,7 +474,7 @@ namespace XBIOM
             tabPageSymReg.Padding = new Padding(4);
             tabPageSymReg.Size = new Size(1136, 540);
             tabPageSymReg.TabIndex = 2;
-            tabPageSymReg.Text = "Hledání předpisu funkce [GA]";
+            tabPageSymReg.Text = "Hledání předpisu funkce [SR/GA]";
             tabPageSymReg.UseVisualStyleBackColor = true;
             // 
             // lblSymRegElapsedTimeTitle
@@ -490,7 +490,7 @@ namespace XBIOM
             // lblSymRegElapsedTime
             // 
             lblSymRegElapsedTime.AutoSize = true;
-            lblSymRegElapsedTime.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            lblSymRegElapsedTime.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 238);
             lblSymRegElapsedTime.Location = new Point(838, 512);
             lblSymRegElapsedTime.Margin = new Padding(4, 0, 4, 0);
             lblSymRegElapsedTime.Name = "lblSymRegElapsedTime";
@@ -525,14 +525,14 @@ namespace XBIOM
             dgvSymRegResults.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvSymRegResults.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvSymRegResults.Columns.AddRange(new DataGridViewColumn[] { colSymRegGeneration, colSymRegFitness, colSymRegComplexity });
-            dgvSymRegResults.Location = new Point(14, 277);
+            dgvSymRegResults.Location = new Point(14, 298);
             dgvSymRegResults.Margin = new Padding(4);
             dgvSymRegResults.Name = "dgvSymRegResults";
             dgvSymRegResults.ReadOnly = true;
             dgvSymRegResults.RowHeadersWidth = 25;
             dgvSymRegResults.ScrollBars = ScrollBars.Vertical;
             dgvSymRegResults.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvSymRegResults.Size = new Size(339, 188);
+            dgvSymRegResults.Size = new Size(392, 167);
             dgvSymRegResults.TabIndex = 18;
             dgvSymRegResults.CellFormatting += dgvSymRegResults_CellFormatting;
             dgvSymRegResults.CellMouseDoubleClick += dgvSymRegResults_CellMouseDoubleClick;
@@ -590,85 +590,86 @@ namespace XBIOM
             gbSymRegParameters.Margin = new Padding(4);
             gbSymRegParameters.Name = "gbSymRegParameters";
             gbSymRegParameters.Padding = new Padding(4);
-            gbSymRegParameters.Size = new Size(339, 170);
+            gbSymRegParameters.Size = new Size(392, 190);
             gbSymRegParameters.TabIndex = 17;
             gbSymRegParameters.TabStop = false;
             gbSymRegParameters.Text = " Parametry programu";
             // 
             // lblSymRegPopulationSize
             // 
-            lblSymRegPopulationSize.Location = new Point(200, 55);
+            lblSymRegPopulationSize.AutoSize = true;
+            lblSymRegPopulationSize.Location = new Point(24, 30);
             lblSymRegPopulationSize.Margin = new Padding(4, 0, 4, 0);
             lblSymRegPopulationSize.Name = "lblSymRegPopulationSize";
-            lblSymRegPopulationSize.Size = new Size(72, 32);
+            lblSymRegPopulationSize.Size = new Size(102, 15);
             lblSymRegPopulationSize.TabIndex = 18;
             lblSymRegPopulationSize.Text = "Velikost populace:";
-            lblSymRegPopulationSize.TextAlign = ContentAlignment.MiddleRight;
+            lblSymRegPopulationSize.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // nuSymRegPopulationSize
             // 
             nuSymRegPopulationSize.Increment = new decimal(new int[] { 10, 0, 0, 0 });
-            nuSymRegPopulationSize.Location = new Point(275, 63);
+            nuSymRegPopulationSize.Location = new Point(148, 26);
             nuSymRegPopulationSize.Margin = new Padding(4);
             nuSymRegPopulationSize.Maximum = new decimal(new int[] { 5000, 0, 0, 0 });
             nuSymRegPopulationSize.Minimum = new decimal(new int[] { 20, 0, 0, 0 });
             nuSymRegPopulationSize.Name = "nuSymRegPopulationSize";
-            nuSymRegPopulationSize.Size = new Size(54, 23);
+            nuSymRegPopulationSize.Size = new Size(67, 23);
             nuSymRegPopulationSize.TabIndex = 17;
             nuSymRegPopulationSize.Value = new decimal(new int[] { 100, 0, 0, 0 });
             // 
             // lblSymRegCrossoverProbability
             // 
-            lblSymRegCrossoverProbability.Location = new Point(200, 132);
+            lblSymRegCrossoverProbability.Location = new Point(24, 60);
             lblSymRegCrossoverProbability.Margin = new Padding(4, 0, 4, 0);
             lblSymRegCrossoverProbability.Name = "lblSymRegCrossoverProbability";
-            lblSymRegCrossoverProbability.Size = new Size(72, 32);
+            lblSymRegCrossoverProbability.Size = new Size(76, 32);
             lblSymRegCrossoverProbability.TabIndex = 16;
-            lblSymRegCrossoverProbability.Text = "Pravděp. křížení:";
-            lblSymRegCrossoverProbability.TextAlign = ContentAlignment.MiddleRight;
+            lblSymRegCrossoverProbability.Text = "Pravděp.\r\nkřížení:";
+            lblSymRegCrossoverProbability.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // nuSymRegCrossoverProbability
             // 
             nuSymRegCrossoverProbability.DecimalPlaces = 2;
             nuSymRegCrossoverProbability.Increment = new decimal(new int[] { 5, 0, 0, 131072 });
-            nuSymRegCrossoverProbability.Location = new Point(275, 137);
+            nuSymRegCrossoverProbability.Location = new Point(148, 66);
             nuSymRegCrossoverProbability.Margin = new Padding(4);
             nuSymRegCrossoverProbability.Maximum = new decimal(new int[] { 1, 0, 0, 0 });
             nuSymRegCrossoverProbability.Name = "nuSymRegCrossoverProbability";
-            nuSymRegCrossoverProbability.Size = new Size(54, 23);
+            nuSymRegCrossoverProbability.Size = new Size(67, 23);
             nuSymRegCrossoverProbability.TabIndex = 15;
             nuSymRegCrossoverProbability.Value = new decimal(new int[] { 8, 0, 0, 65536 });
             // 
             // lblSymRegMutationProbability
             // 
-            lblSymRegMutationProbability.Location = new Point(200, 20);
+            lblSymRegMutationProbability.Location = new Point(235, 22);
             lblSymRegMutationProbability.Margin = new Padding(4, 0, 4, 0);
             lblSymRegMutationProbability.Name = "lblSymRegMutationProbability";
-            lblSymRegMutationProbability.Size = new Size(60, 32);
+            lblSymRegMutationProbability.Size = new Size(76, 32);
             lblSymRegMutationProbability.TabIndex = 14;
-            lblSymRegMutationProbability.Text = "Pravděp. mutace:";
-            lblSymRegMutationProbability.TextAlign = ContentAlignment.MiddleRight;
+            lblSymRegMutationProbability.Text = "Pravděp.\r\nmutace:";
+            lblSymRegMutationProbability.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // nuSymRegMutationProbability
             // 
             nuSymRegMutationProbability.DecimalPlaces = 3;
             nuSymRegMutationProbability.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
-            nuSymRegMutationProbability.Location = new Point(275, 25);
+            nuSymRegMutationProbability.Location = new Point(318, 26);
             nuSymRegMutationProbability.Margin = new Padding(4);
             nuSymRegMutationProbability.Maximum = new decimal(new int[] { 2, 0, 0, 65536 });
             nuSymRegMutationProbability.Minimum = new decimal(new int[] { 1, 0, 0, 196608 });
             nuSymRegMutationProbability.Name = "nuSymRegMutationProbability";
-            nuSymRegMutationProbability.Size = new Size(54, 23);
+            nuSymRegMutationProbability.Size = new Size(67, 23);
             nuSymRegMutationProbability.TabIndex = 13;
             nuSymRegMutationProbability.Value = new decimal(new int[] { 5, 0, 0, 131072 });
             // 
             // nuSymRegPointsCount
             // 
-            nuSymRegPointsCount.Location = new Point(150, 137);
+            nuSymRegPointsCount.Location = new Point(148, 131);
             nuSymRegPointsCount.Maximum = new decimal(new int[] { 15, 0, 0, 0 });
             nuSymRegPointsCount.Minimum = new decimal(new int[] { 4, 0, 0, 0 });
             nuSymRegPointsCount.Name = "nuSymRegPointsCount";
-            nuSymRegPointsCount.Size = new Size(40, 23);
+            nuSymRegPointsCount.Size = new Size(67, 23);
             nuSymRegPointsCount.TabIndex = 12;
             nuSymRegPointsCount.Value = new decimal(new int[] { 5, 0, 0, 0 });
             nuSymRegPointsCount.ValueChanged += nuSymRegPointsCount_ValueChanged;
@@ -676,7 +677,7 @@ namespace XBIOM
             // lblSymRegPointsCount
             // 
             lblSymRegPointsCount.AutoSize = true;
-            lblSymRegPointsCount.Location = new Point(6, 141);
+            lblSymRegPointsCount.Location = new Point(24, 134);
             lblSymRegPointsCount.Name = "lblSymRegPointsCount";
             lblSymRegPointsCount.Size = new Size(121, 15);
             lblSymRegPointsCount.TabIndex = 11;
@@ -684,48 +685,48 @@ namespace XBIOM
             // 
             // nuSymRegOutputPrecision
             // 
-            nuSymRegOutputPrecision.Location = new Point(284, 108);
+            nuSymRegOutputPrecision.Location = new Point(318, 131);
             nuSymRegOutputPrecision.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
             nuSymRegOutputPrecision.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             nuSymRegOutputPrecision.Name = "nuSymRegOutputPrecision";
-            nuSymRegOutputPrecision.Size = new Size(45, 23);
+            nuSymRegOutputPrecision.Size = new Size(67, 23);
             nuSymRegOutputPrecision.TabIndex = 10;
             nuSymRegOutputPrecision.Value = new decimal(new int[] { 2, 0, 0, 0 });
             // 
             // lblSymRegOutputPrecision
             // 
-            lblSymRegOutputPrecision.Location = new Point(200, 100);
+            lblSymRegOutputPrecision.Location = new Point(235, 124);
             lblSymRegOutputPrecision.Name = "lblSymRegOutputPrecision";
-            lblSymRegOutputPrecision.Size = new Size(81, 39);
+            lblSymRegOutputPrecision.Size = new Size(76, 32);
             lblSymRegOutputPrecision.TabIndex = 9;
-            lblSymRegOutputPrecision.Text = "Počet des. míst výstupu:";
-            lblSymRegOutputPrecision.TextAlign = ContentAlignment.MiddleRight;
+            lblSymRegOutputPrecision.Text = "Počet des.\r\nmíst výstupu:";
+            lblSymRegOutputPrecision.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // nuSymRegMinFitness
             // 
             nuSymRegMinFitness.Enabled = false;
-            nuSymRegMinFitness.Location = new Point(150, 108);
+            nuSymRegMinFitness.Location = new Point(318, 160);
             nuSymRegMinFitness.Maximum = new decimal(new int[] { 20, 0, 0, 0 });
             nuSymRegMinFitness.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             nuSymRegMinFitness.Name = "nuSymRegMinFitness";
-            nuSymRegMinFitness.Size = new Size(40, 23);
+            nuSymRegMinFitness.Size = new Size(67, 23);
             nuSymRegMinFitness.TabIndex = 8;
             nuSymRegMinFitness.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // cbSymRegAllowEndOnFitness
             // 
-            cbSymRegAllowEndOnFitness.Location = new Point(8, 100);
+            cbSymRegAllowEndOnFitness.Location = new Point(24, 160);
             cbSymRegAllowEndOnFitness.Name = "cbSymRegAllowEndOnFitness";
-            cbSymRegAllowEndOnFitness.Size = new Size(136, 39);
+            cbSymRegAllowEndOnFitness.Size = new Size(287, 24);
             cbSymRegAllowEndOnFitness.TabIndex = 7;
-            cbSymRegAllowEndOnFitness.Text = "povolit ukončení pro chybu menší než: ";
+            cbSymRegAllowEndOnFitness.Text = "povolit ukončení při chybě menší než:";
             cbSymRegAllowEndOnFitness.UseVisualStyleBackColor = true;
             cbSymRegAllowEndOnFitness.CheckedChanged += cbSymRegAllowEndOnFitness_CheckedChanged;
             // 
             // lblSymRegGenerationsSuffix
             // 
             lblSymRegGenerationsSuffix.AutoSize = true;
-            lblSymRegGenerationsSuffix.Location = new Point(166, 65);
+            lblSymRegGenerationsSuffix.Location = new Point(222, 100);
             lblSymRegGenerationsSuffix.Margin = new Padding(4, 0, 4, 0);
             lblSymRegGenerationsSuffix.Name = "lblSymRegGenerationsSuffix";
             lblSymRegGenerationsSuffix.Size = new Size(65, 15);
@@ -735,19 +736,19 @@ namespace XBIOM
             // nuSymRegGenerationCount
             // 
             nuSymRegGenerationCount.Increment = new decimal(new int[] { 1000, 0, 0, 0 });
-            nuSymRegGenerationCount.Location = new Point(100, 63);
+            nuSymRegGenerationCount.Location = new Point(148, 96);
             nuSymRegGenerationCount.Margin = new Padding(4);
             nuSymRegGenerationCount.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             nuSymRegGenerationCount.Minimum = new decimal(new int[] { 100, 0, 0, 0 });
             nuSymRegGenerationCount.Name = "nuSymRegGenerationCount";
-            nuSymRegGenerationCount.Size = new Size(60, 23);
+            nuSymRegGenerationCount.Size = new Size(67, 23);
             nuSymRegGenerationCount.TabIndex = 1;
             nuSymRegGenerationCount.Value = new decimal(new int[] { 10000, 0, 0, 0 });
             // 
             // lblSymRegGenerationCount
             // 
             lblSymRegGenerationCount.AutoSize = true;
-            lblSymRegGenerationCount.Location = new Point(8, 65);
+            lblSymRegGenerationCount.Location = new Point(24, 100);
             lblSymRegGenerationCount.Margin = new Padding(4, 0, 4, 0);
             lblSymRegGenerationCount.Name = "lblSymRegGenerationCount";
             lblSymRegGenerationCount.Size = new Size(68, 15);
@@ -756,22 +757,22 @@ namespace XBIOM
             // 
             // nuSymRegChromosomeLength
             // 
-            nuSymRegChromosomeLength.Location = new Point(100, 25);
+            nuSymRegChromosomeLength.Location = new Point(318, 66);
             nuSymRegChromosomeLength.Margin = new Padding(4);
             nuSymRegChromosomeLength.Minimum = new decimal(new int[] { 6, 0, 0, 0 });
             nuSymRegChromosomeLength.Name = "nuSymRegChromosomeLength";
-            nuSymRegChromosomeLength.Size = new Size(60, 23);
+            nuSymRegChromosomeLength.Size = new Size(67, 23);
             nuSymRegChromosomeLength.TabIndex = 1;
             nuSymRegChromosomeLength.Value = new decimal(new int[] { 10, 0, 0, 0 });
             // 
             // lblSymRegChromosomeLength
             // 
-            lblSymRegChromosomeLength.Location = new Point(8, 20);
+            lblSymRegChromosomeLength.Location = new Point(235, 60);
             lblSymRegChromosomeLength.Margin = new Padding(4, 0, 4, 0);
             lblSymRegChromosomeLength.Name = "lblSymRegChromosomeLength";
-            lblSymRegChromosomeLength.Size = new Size(84, 32);
+            lblSymRegChromosomeLength.Size = new Size(76, 32);
             lblSymRegChromosomeLength.TabIndex = 0;
-            lblSymRegChromosomeLength.Text = "Velikost chromozomu:";
+            lblSymRegChromosomeLength.Text = "Velikost\r\nchromozomu:";
             // 
             // btnSymRegRun
             // 
@@ -787,10 +788,10 @@ namespace XBIOM
             // formsPlotSymReg
             // 
             formsPlotSymReg.ForeColor = SystemColors.ControlText;
-            formsPlotSymReg.Location = new Point(360, 17);
+            formsPlotSymReg.Location = new Point(414, 17);
             formsPlotSymReg.Margin = new Padding(3, 2, 3, 2);
             formsPlotSymReg.Name = "formsPlotSymReg";
-            formsPlotSymReg.Size = new Size(759, 448);
+            formsPlotSymReg.Size = new Size(705, 448);
             formsPlotSymReg.TabIndex = 15;
             formsPlotSymReg.MouseDown += formsPlotSymReg_MouseDown;
             formsPlotSymReg.MouseMove += formsPlotSymReg_MouseMove;
@@ -814,16 +815,16 @@ namespace XBIOM
             panelSymRegDescription.Location = new Point(14, 17);
             panelSymRegDescription.Margin = new Padding(4);
             panelSymRegDescription.Name = "panelSymRegDescription";
-            panelSymRegDescription.Size = new Size(339, 74);
+            panelSymRegDescription.Size = new Size(392, 74);
             panelSymRegDescription.TabIndex = 9;
             // 
             // lblSymRegDescription
             // 
-            lblSymRegDescription.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            lblSymRegDescription.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
             lblSymRegDescription.Location = new Point(4, 0);
             lblSymRegDescription.Margin = new Padding(4, 0, 4, 0);
             lblSymRegDescription.Name = "lblSymRegDescription";
-            lblSymRegDescription.Size = new Size(328, 65);
+            lblSymRegDescription.Size = new Size(381, 65);
             lblSymRegDescription.TabIndex = 0;
             lblSymRegDescription.Text = "Symbolická regrese pomocí genetických algoritmů (GA) hledá matematický předpis funkce, která v ideálním případě přímo prochází zadanými body nebo je alespoň\r\ns co nejmenší možnou chybou aproximuje.";
             lblSymRegDescription.TextAlign = ContentAlignment.MiddleLeft;
@@ -941,7 +942,7 @@ namespace XBIOM
             // lblTspGaElapsedTime
             // 
             lblTspGaElapsedTime.AutoSize = true;
-            lblTspGaElapsedTime.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            lblTspGaElapsedTime.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 238);
             lblTspGaElapsedTime.Location = new Point(116, 356);
             lblTspGaElapsedTime.Margin = new Padding(4, 0, 4, 0);
             lblTspGaElapsedTime.Name = "lblTspGaElapsedTime";
@@ -1161,7 +1162,7 @@ namespace XBIOM
             // 
             // lblDiophantineDescription
             // 
-            lblDiophantineDescription.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            lblDiophantineDescription.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
             lblDiophantineDescription.Location = new Point(-2, 4);
             lblDiophantineDescription.Margin = new Padding(4, 0, 4, 0);
             lblDiophantineDescription.Name = "lblDiophantineDescription";
@@ -1276,7 +1277,7 @@ namespace XBIOM
             // lblDiophantineElapsedTime
             // 
             lblDiophantineElapsedTime.AutoSize = true;
-            lblDiophantineElapsedTime.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            lblDiophantineElapsedTime.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 238);
             lblDiophantineElapsedTime.Location = new Point(116, 356);
             lblDiophantineElapsedTime.Margin = new Padding(4, 0, 4, 0);
             lblDiophantineElapsedTime.Name = "lblDiophantineElapsedTime";

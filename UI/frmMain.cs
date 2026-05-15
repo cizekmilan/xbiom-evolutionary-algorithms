@@ -32,9 +32,125 @@ namespace XBIOM
         {
             InitializeComponent();
             LoadTabIcons();
+            SetupToolTips();
             SetupCustomContextMenu();
             CreateRandomSymRegPoints();
             LoadSOMForm();
+        }
+
+        private void SetupToolTips()
+        {
+            ToolTip toolTip = new(components)
+            {
+                AutoPopDelay = 9000,
+                InitialDelay = 400,
+                ReshowDelay = 100,
+                ShowAlways = true
+            };
+
+            void SetToolTip(string text, params Control[] controls)
+            {
+                foreach (Control control in controls)
+                {
+                    toolTip.SetToolTip(control, text);
+                }
+            }
+
+            SetToolTip("Počet náhodně generovaných měst v mapě. Změna se projeví po vygenerování nové mapy.",
+                lblTspSomCitiesCount, nuTspSomCitiesCount);
+            SetToolTip("Vygeneruje novou sadu měst podle nastaveného počtu.",
+                btnTspSomRandomizeMap);
+            SetToolTip("Počet tréninkových epoch Kohonenovy mapy.",
+                lblTspSomTrainingCycles, nuTspSomTrainingCycles);
+            SetToolTip("Počáteční learning rate. Během učení postupně klesá.",
+                lblTspSomInitialLearningRate, nuTspSomInitialLearningRate);
+            SetToolTip("Zapne průběžné vykreslování posunu neuronů během tréninku.",
+                chkTspSomShowVisualization);
+            SetToolTip("Rychlost průběžné vizualizace. Vyšší hodnota znamená kratší pauzu mezi kroky.",
+                lblTspSomVisualizationSpeed, trkTspSomVisualizationSpeed);
+            SetToolTip("Spustí trénink SOM nad aktuální mapou měst.",
+                btnTspSomRun);
+            SetToolTip("Požádá o přerušení probíhajícího tréninku.",
+                btnTspSomStop);
+            SetToolTip("Zobrazuje vygenerovaná města a aktuální tvar Kohonenovy mapy.",
+                zedTspSomCitiesGraph);
+            SetToolTip("Zobrazuje vývoj průměrné chyby SOM během tréninku.",
+                formsPlotTspSomError);
+            SetToolTip("Zobrazuje průběh tréninku v procentech.",
+                pbTspSomTraining);
+
+            SetToolTip("Graf vstupních bodů a nalezené funkce. Body lze posouvat myší, pravé tlačítko otevře nabídku grafu.",
+                formsPlotSymReg);
+            SetToolTip("Počet operací v chromozomu, tedy maximální délka hledaného předpisu funkce.",
+                lblSymRegChromosomeLength, nuSymRegChromosomeLength);
+            SetToolTip("Velikost populace kandidátních funkcí v jedné generaci.",
+                lblSymRegPopulationSize, nuSymRegPopulationSize);
+            SetToolTip("Maximální počet generací symbolické regrese.",
+                lblSymRegGenerationCount, lblSymRegGenerationsSuffix, nuSymRegGenerationCount);
+            SetToolTip("Pravděpodobnost, že se konkrétní gen v chromozomu nahradí novou náhodnou operací.",
+                lblSymRegMutationProbability, nuSymRegMutationProbability);
+            SetToolTip("Pravděpodobnost křížení dvou rodičovských chromozomů při tvorbě potomka.",
+                lblSymRegCrossoverProbability, nuSymRegCrossoverProbability);
+            string pointsCountHint = "Hodnota se projeví při dalším vytvoření bodů/funkce z kontextového menu grafu.";
+            SetToolTip(pointsCountHint, lblSymRegPointsCount, nuSymRegPointsCount);
+            SetToolTip("Počet desetinných míst použitý při výpisu nalezené funkce.",
+                lblSymRegOutputPrecision, nuSymRegOutputPrecision);
+            SetToolTip("Povolí předčasné ukončení, když nejlepší chyba klesne pod nastavenou hodnotu.",
+                cbSymRegAllowEndOnFitness, nuSymRegMinFitness);
+            SetToolTip("Spustí symbolickou regresi pro aktuální body v grafu.",
+                btnSymRegRun);
+            SetToolTip("Požádá o přerušení aktuálního běhu symbolické regrese.",
+                btnSymRegInterrupt);
+            SetToolTip("Historie zlepšení nejlepšího řešení. Dvojklikem lze znovu zobrazit vybranou nalezenou funkci.",
+                dgvSymRegResults);
+            SetToolTip("Textový zápis nejlepší nalezené funkce.",
+                tbSymRegResult);
+            SetToolTip("Zobrazuje průběh výpočtu podle počtu zpracovaných generací.",
+                pbSymRegProgress);
+
+            SetToolTip("Velikost populace náhodných tras.",
+                lblTspGaPopulationSize, nuTspGaPopulationSize);
+            SetToolTip("Maximální počet generací genetického algoritmu.",
+                lblTspGaGenerationCount, lblTspGaGenerationsSuffix, nuTspGaGenerationCount);
+            SetToolTip("Pravděpodobnost mutace trasy.",
+                lblTspGaMutationProbability, nuTspGaMutationProbability);
+            SetToolTip("Pravděpodobnost křížení dvou tras.",
+                lblTspGaCrossoverProbability, nuTspGaCrossoverProbability);
+            SetToolTip("Ponechá nejlepší část populace beze změny do další generace.",
+                cbTspGaUseElites, lblTspGaElitismPercent, nuTspGaElitismPercent);
+            SetToolTip("Spustí genetický algoritmus pro pevně definovanou sadu měst.",
+                btnTspGaRun);
+            SetToolTip("Požádá o přerušení aktuálního běhu TSP GA.",
+                btnTspGaInterrupt);
+            SetToolTip("Průběžně zobrazuje nejlepší generaci, fitness a délku trasy.",
+                dgvTspGaResults);
+            SetToolTip("Zobrazuje známou referenční trasu a nejlepší nalezenou trasu.",
+                tbTspGaResult);
+            SetToolTip("Zobrazuje průběh výpočtu podle počtu zpracovaných generací.",
+                pbTspGaProgress);
+
+            SetToolTip("Velikost populace kandidátních hodnot a, b, c, d.",
+                lblDiophantinePopulationSize, nuDiophantinePopulationSize);
+            SetToolTip("Maximální počet generací genetického algoritmu.",
+                lblDiophantineGenerationCount, lblDiophantineGenerationsSuffix, nuDiophantineGenerationCount);
+            SetToolTip("Pravděpodobnost mutace hodnot v chromozomu.",
+                lblDiophantineMutationProbability, nuDiophantineMutationProbability);
+            SetToolTip("Pravděpodobnost křížení dvou chromozomů.",
+                lblDiophantineCrossoverProbability, nuDiophantineCrossoverProbability);
+            SetToolTip("Ponechá nejlepší část populace beze změny do další generace, pokud je elitismus zapnutý.",
+                cbDiophantineUseElites, lblDiophantineElitismPercent, nuDiophantineElitismPercent);
+            SetToolTip("Ukončí výpočet hned po nalezení přesného řešení s fitness = 1.",
+                cbDiophantineEndOnPerfectFitness);
+            SetToolTip("Spustí hledání celočíselného řešení rovnice.",
+                btnDiophantineRun);
+            SetToolTip("Požádá o přerušení aktuálního běhu diofantické úlohy.",
+                btnDiophantineInterrupt);
+            SetToolTip("Průběžně zobrazuje nejlepší nalezené hodnoty a, b, c, d a hodnotu rovnice.",
+                dgvDiophantineResults);
+            SetToolTip("Zobrazuje nalezená řešení rovnice.",
+                tbDiophantineResult);
+            SetToolTip("Zobrazuje průběh výpočtu podle počtu zpracovaných generací.",
+                pbDiophantineProgress);
         }
 
         private void LoadTabIcons()

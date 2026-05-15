@@ -1,4 +1,4 @@
-﻿# 🧬 XBIOM Evolutionary Algorithms
+﻿# 🧬 Biology-Inspired Optimization Methods
 
 > Demonstration application for biology-inspired optimization methods and evolutionary algorithms.
 
@@ -325,7 +325,7 @@ Known limitations:
 * the TSP GA and TSP SOM modules use different distance metrics and route assumptions
 * random seeds are not currently exposed in the UI, so repeated runs are not exactly reproducible
 * the symbolic regression complexity score is heuristic and intended for comparison, not formal mathematical complexity analysis
-* the UI and comments are primarily Czech because the application was built as a study project for Czech students
+* the UI and comments are primarily Czech because the application was built as a study project
 
 # Status
 
