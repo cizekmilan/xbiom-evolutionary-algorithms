@@ -13,6 +13,7 @@ namespace XBIOM
         double[] symRegYs = Array.Empty<double>();
 
         ScottPlot.Plottables.Scatter? symRegScatter;
+        ScottPlot.IPlottable? symRegReferenceFunction;
         List<SymbolicRegressionChromosome> symRegSteps = new();  // jednotlivé kroky, každý odpovídá jednomu řádku gridu
         int? symRegDraggedPointIndex = null;
         volatile bool symRegInterrupted = false;

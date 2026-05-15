@@ -27,6 +27,7 @@ namespace XBIOM
 
             if (symRegDraggedPointIndex.HasValue)
             {
+                ClearSymRegDerivedCurves();
                 symRegXs[symRegDraggedPointIndex.Value] = mouseLocation.X;
                 symRegYs[symRegDraggedPointIndex.Value] = mouseLocation.Y;
                 formsPlotSymReg.Refresh();
@@ -35,9 +36,23 @@ namespace XBIOM
 
         private void formsPlotSymReg_MouseUp(object sender, MouseEventArgs e)
         {
+            bool pointWasDragged = symRegDraggedPointIndex.HasValue;
             symRegDraggedPointIndex = null;
             formsPlotSymReg.UserInputProcessor.Enable();
+            if (pointWasDragged)
+                UpdateSymRegDataFromPoints();
             formsPlotSymReg.Refresh();
+        }
+
+        private void ClearSymRegDerivedCurves()
+        {
+            if (symRegReferenceFunction != null)
+            {
+                formsPlotSymReg.Plot.Remove(symRegReferenceFunction);
+                symRegReferenceFunction = null;
+            }
+
+            formsPlotSymReg.Plot.Remove<Scatter>(x => x.Color == symRegResultColor);
         }
 
         void UpdateSymRegDataFromPoints()
@@ -200,6 +215,7 @@ namespace XBIOM
             formsPlotSymReg.Plot.Clear();
             formsPlotSymReg.Plot.Clear<Scatter>();
             formsPlotSymReg.Plot.Clear<Marker>();
+            symRegReferenceFunction = null;
             symRegXs = GenerateSymRegXs();
             symRegYs = Generate.RandomSample(symRegPointsCount, -7, 7);
 
@@ -226,13 +242,16 @@ namespace XBIOM
             }
             UpdateSymRegDataFromPoints();
             formsPlotSymReg.Plot.Clear();
+            symRegReferenceFunction = null;
             symRegScatter = formsPlotSymReg.Plot.Add.Scatter(symRegXs, symRegYs);
             symRegScatter.LineWidth = 2;
             symRegScatter.MarkerSize = 10;
             symRegScatter.Smooth = false;
             symRegScatter.Color = ScottPlot.Color.FromColor(System.Drawing.Color.Green);
             formsPlotSymReg.Plot.Axes.SetLimits(-10, 10, -10, 10);
-            formsPlotSymReg.Plot.Add.Function(fnc).LineWidth = 2;
+            var referenceFunction = formsPlotSymReg.Plot.Add.Function(fnc);
+            referenceFunction.LineWidth = 2;
+            symRegReferenceFunction = referenceFunction;
             formsPlotSymReg.Refresh();
         }
 
@@ -272,6 +291,8 @@ namespace XBIOM
             clearPlotItem.Click += (s, e) =>
             {
                 formsPlotSymReg.Plot.Clear();
+                symRegScatter = null;
+                symRegReferenceFunction = null;
                 formsPlotSymReg.Refresh();
                 symRegPointsCleared = true;
             };
@@ -299,12 +320,13 @@ namespace XBIOM
                 CheckMenuItem(plotStyleMenu, lineStyleItem);
 
                 formsPlotSymReg.Plot.Clear();
-                var scatter = formsPlotSymReg.Plot.Add.Scatter(symRegXs, symRegYs);
-                scatter.LineWidth = 2;
-                scatter.MarkerSize = 10;
-                scatter.Color = ScottPlot.Color.FromColor(System.Drawing.Color.Green);
-                scatter.PathStrategy = new ScottPlot.PathStrategies.Straight();
-                scatter.Smooth = false;
+                symRegReferenceFunction = null;
+                symRegScatter = formsPlotSymReg.Plot.Add.Scatter(symRegXs, symRegYs);
+                symRegScatter.LineWidth = 2;
+                symRegScatter.MarkerSize = 10;
+                symRegScatter.Color = ScottPlot.Color.FromColor(System.Drawing.Color.Green);
+                symRegScatter.PathStrategy = new ScottPlot.PathStrategies.Straight();
+                symRegScatter.Smooth = false;
                 formsPlotSymReg.Refresh();
             };
 
@@ -316,11 +338,12 @@ namespace XBIOM
                 CheckMenuItem(plotStyleMenu, quadHalfPointStyleItem);
 
                 formsPlotSymReg.Plot.Clear();
-                var scatter = formsPlotSymReg.Plot.Add.Scatter(symRegXs, symRegYs);
-                scatter.LineWidth = 2;
-                scatter.MarkerSize = 10;
-                scatter.Color = ScottPlot.Color.FromColor(System.Drawing.Color.Green);
-                scatter.PathStrategy = new ScottPlot.PathStrategies.QuadHalfPoint();
+                symRegReferenceFunction = null;
+                symRegScatter = formsPlotSymReg.Plot.Add.Scatter(symRegXs, symRegYs);
+                symRegScatter.LineWidth = 2;
+                symRegScatter.MarkerSize = 10;
+                symRegScatter.Color = ScottPlot.Color.FromColor(System.Drawing.Color.Green);
+                symRegScatter.PathStrategy = new ScottPlot.PathStrategies.QuadHalfPoint();
                 formsPlotSymReg.Refresh();
             };
 
@@ -332,11 +355,12 @@ namespace XBIOM
                 CheckMenuItem(plotStyleMenu, cubicSplineStyleItem);
 
                 formsPlotSymReg.Plot.Clear();
-                var scatter = formsPlotSymReg.Plot.Add.Scatter(symRegXs, symRegYs);
-                scatter.Color = ScottPlot.Color.FromColor(System.Drawing.Color.Green);
-                scatter.LineWidth = 2;
-                scatter.MarkerSize = 10;
-                scatter.PathStrategy = new ScottPlot.PathStrategies.CubicSpline();
+                symRegReferenceFunction = null;
+                symRegScatter = formsPlotSymReg.Plot.Add.Scatter(symRegXs, symRegYs);
+                symRegScatter.Color = ScottPlot.Color.FromColor(System.Drawing.Color.Green);
+                symRegScatter.LineWidth = 2;
+                symRegScatter.MarkerSize = 10;
+                symRegScatter.PathStrategy = new ScottPlot.PathStrategies.CubicSpline();
                 formsPlotSymReg.Refresh();
             };
 

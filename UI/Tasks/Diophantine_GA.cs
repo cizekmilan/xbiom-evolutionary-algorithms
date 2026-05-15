@@ -86,6 +86,7 @@ namespace XBIOM
                     progressInfo.D,
                     progressInfo.Result
                 });
+                dgvDiophantineResults.CurrentCell = dgvDiophantineResults.Rows[dgvDiophantineResults.Rows.Count - 1].Cells[0];
 
                 if (dgvDiophantineResults.Rows.Count < 20)
                     dgvDiophantineResults.Refresh();

@@ -52,6 +52,7 @@ namespace XBIOM
             var progress = new Progress<TspGaGenerationProgress>(progressInfo =>
             {
                 dgvTspGaResults.Rows.Add(new object[] { progressInfo.Generation, progressInfo.Fitness, progressInfo.RouteDistance });
+                dgvTspGaResults.CurrentCell = dgvTspGaResults.Rows[dgvTspGaResults.Rows.Count - 1].Cells[0];
                 if (dgvTspGaResults.Rows.Count < 20)
                     dgvTspGaResults.Refresh();
 

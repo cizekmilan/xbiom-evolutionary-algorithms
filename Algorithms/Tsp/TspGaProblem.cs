@@ -83,6 +83,7 @@ namespace XBIOM.Algorithms.Tsp
 
         /// <summary>
         /// Vrátí pevnou množinu měst použitou v ukázkové úloze obchodního cestujícího.
+        /// Souřadnice jsou GPS hodnoty v desetinných stupních v pořadí latitude, longitude.
         /// </summary>
         private static List<City> CreateCities()
         {
