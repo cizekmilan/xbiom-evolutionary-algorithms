@@ -67,7 +67,7 @@ salesman_som.csv
 
 The CSV output contains the comparable route distance, average error, SOM parameters, elapsed time, and run status.
 
-![Travelling Salesman Problem – Self-Organizing Map demo](docs/tsp-som-demo.gif)
+![Travelling Salesman Problem – Self-Organizing Map demo](docs/tsp-som-demo.png)
 
 ## 📈 Symbolic Regression
 
@@ -130,7 +130,7 @@ symbolic_regression.csv
 
 The CSV output stores the resulting expression, error metrics, complexity score, algorithm parameters, elapsed time, and run status.
 
-![Symbolic Regression demo](docs/symbolic-regression-demo.gif)
+![Symbolic Regression demo](docs/symbolic-regression-demo.png)
 
 ## 🗺️ Travelling Salesman Problem – Genetic Algorithm
 
@@ -193,7 +193,7 @@ salesman_ga.csv
 
 The CSV output stores the comparable route distance, fitness, GA parameters, elapsed time, and run status.
 
-![Travelling Salesman Problem – Genetic Algorithm demo](docs/tsp-ga-demo.gif)
+![Travelling Salesman Problem – Genetic Algorithm demo](docs/tsp-ga-demo.png)
 
 ## 🧮 Diophantine Equation Solver
 
@@ -236,7 +236,7 @@ diophantine.csv
 
 The CSV output stores the resulting values, equation result, fitness, GA parameters, elapsed time, and run status.
 
-![Diophantine Equation Solver demo](docs/diophantine-demo.gif)
+![Diophantine Equation Solver demo](docs/diophantine-demo.png)
 
 # 📊 CSV Outputs
 
@@ -271,10 +271,10 @@ If an existing CSV file has an outdated header, it is automatically renamed with
 │   └── ResultSaver.cs            # Shared CSV export logic and result DTOs
 │
 ├── docs/                         # Demo animations for application modules
-│   ├── tsp-som-demo.gif
-│   ├── symbolic-regression-demo.gif
-│   ├── tsp-ga-demo.gif
-│   └── diophantine-demo.gif
+│   ├── tsp-som-demo.png
+│   ├── symbolic-regression-demo.png
+│   ├── tsp-ga-demo.png
+│   └── diophantine-demo.png
 │
 ├── Properties/                   # Application resources
 │
