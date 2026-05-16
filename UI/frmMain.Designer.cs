@@ -910,6 +910,7 @@ namespace XBIOM
             dgvTspGaResults.AllowUserToAddRows = false;
             dgvTspGaResults.AllowUserToDeleteRows = false;
             dgvTspGaResults.AllowUserToResizeRows = false;
+            dgvTspGaResults.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvTspGaResults.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvTspGaResults.Columns.AddRange(new DataGridViewColumn[] { colTspGaGeneration, colTspGaFitness, colTspGaDistance });
             dgvTspGaResults.Location = new Point(531, 17);
@@ -923,27 +924,33 @@ namespace XBIOM
             // 
             // colTspGaGeneration
             // 
+            colTspGaGeneration.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            colTspGaGeneration.FillWeight = 1F;
             colTspGaGeneration.HeaderText = "Generace";
-            colTspGaGeneration.MinimumWidth = 6;
+            colTspGaGeneration.MinimumWidth = 90;
             colTspGaGeneration.Name = "colTspGaGeneration";
             colTspGaGeneration.ReadOnly = true;
-            colTspGaGeneration.Width = 125;
+            colTspGaGeneration.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // colTspGaFitness
             // 
+            colTspGaFitness.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            colTspGaFitness.FillWeight = 1F;
             colTspGaFitness.HeaderText = "Fitness";
-            colTspGaFitness.MinimumWidth = 6;
+            colTspGaFitness.MinimumWidth = 90;
             colTspGaFitness.Name = "colTspGaFitness";
             colTspGaFitness.ReadOnly = true;
-            colTspGaFitness.Width = 150;
+            colTspGaFitness.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // colTspGaDistance
             // 
+            colTspGaDistance.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            colTspGaDistance.FillWeight = 1.2F;
             colTspGaDistance.HeaderText = "Vzdálenost";
-            colTspGaDistance.MinimumWidth = 6;
+            colTspGaDistance.MinimumWidth = 110;
             colTspGaDistance.Name = "colTspGaDistance";
             colTspGaDistance.ReadOnly = true;
-            colTspGaDistance.Width = 180;
+            colTspGaDistance.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // lblTspGaElapsedTime
             // 
@@ -1214,6 +1221,7 @@ namespace XBIOM
             dgvDiophantineResults.AllowUserToAddRows = false;
             dgvDiophantineResults.AllowUserToDeleteRows = false;
             dgvDiophantineResults.AllowUserToResizeRows = false;
+            dgvDiophantineResults.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvDiophantineResults.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvDiophantineResults.Columns.AddRange(new DataGridViewColumn[] { colDiophantineGeneration, colDiophantineFitness, colDiophantineA, colDiophantineB, colDiophantineC, colDiophantineD, colDiophantineResult });
             dgvDiophantineResults.Location = new Point(531, 17);
@@ -1227,59 +1235,73 @@ namespace XBIOM
             // 
             // colDiophantineGeneration
             // 
+            colDiophantineGeneration.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            colDiophantineGeneration.FillWeight = 1F;
             colDiophantineGeneration.HeaderText = "Generace";
-            colDiophantineGeneration.MinimumWidth = 6;
+            colDiophantineGeneration.MinimumWidth = 80;
             colDiophantineGeneration.Name = "colDiophantineGeneration";
             colDiophantineGeneration.ReadOnly = true;
-            colDiophantineGeneration.Width = 80;
+            colDiophantineGeneration.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // colDiophantineFitness
             // 
+            colDiophantineFitness.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            colDiophantineFitness.FillWeight = 1F;
             colDiophantineFitness.HeaderText = "Fitness";
-            colDiophantineFitness.MinimumWidth = 6;
+            colDiophantineFitness.MinimumWidth = 80;
             colDiophantineFitness.Name = "colDiophantineFitness";
             colDiophantineFitness.ReadOnly = true;
-            colDiophantineFitness.Width = 150;
+            colDiophantineFitness.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // colDiophantineA
             // 
+            colDiophantineA.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            colDiophantineA.FillWeight = 0.45F;
             colDiophantineA.HeaderText = "a";
-            colDiophantineA.MinimumWidth = 6;
+            colDiophantineA.MinimumWidth = 45;
             colDiophantineA.Name = "colDiophantineA";
             colDiophantineA.ReadOnly = true;
-            colDiophantineA.Width = 30;
+            colDiophantineA.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // colDiophantineB
             // 
+            colDiophantineB.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            colDiophantineB.FillWeight = 0.45F;
             colDiophantineB.HeaderText = "b";
-            colDiophantineB.MinimumWidth = 6;
+            colDiophantineB.MinimumWidth = 45;
             colDiophantineB.Name = "colDiophantineB";
             colDiophantineB.ReadOnly = true;
-            colDiophantineB.Width = 30;
+            colDiophantineB.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // colDiophantineC
             // 
+            colDiophantineC.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            colDiophantineC.FillWeight = 0.45F;
             colDiophantineC.HeaderText = "c";
-            colDiophantineC.MinimumWidth = 6;
+            colDiophantineC.MinimumWidth = 45;
             colDiophantineC.Name = "colDiophantineC";
             colDiophantineC.ReadOnly = true;
-            colDiophantineC.Width = 30;
+            colDiophantineC.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // colDiophantineD
             // 
+            colDiophantineD.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            colDiophantineD.FillWeight = 0.45F;
             colDiophantineD.HeaderText = "d";
-            colDiophantineD.MinimumWidth = 6;
+            colDiophantineD.MinimumWidth = 45;
             colDiophantineD.Name = "colDiophantineD";
             colDiophantineD.ReadOnly = true;
-            colDiophantineD.Width = 30;
+            colDiophantineD.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // colDiophantineResult
             // 
+            colDiophantineResult.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            colDiophantineResult.FillWeight = 1.3F;
             colDiophantineResult.HeaderText = "Výsledek";
-            colDiophantineResult.MinimumWidth = 6;
+            colDiophantineResult.MinimumWidth = 110;
             colDiophantineResult.Name = "colDiophantineResult";
             colDiophantineResult.ReadOnly = true;
-            colDiophantineResult.Width = 180;
+            colDiophantineResult.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // lblDiophantineElapsedTime
             // 
