@@ -93,6 +93,7 @@ Displayed progress:
 * complexity score of the current best expression
 
 The table only records improvements of the best solution, so it acts as a compact history of meaningful search progress.
+Double-clicking a table row restores the selected intermediate expression in the plot, making it easy to review how the solution evolved during the run.
 
 ### 📐 Error and Complexity Scoring
 
