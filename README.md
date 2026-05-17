@@ -286,6 +286,13 @@ If an existing CSV file has an outdated header, it is automatically renamed with
 │   ├── frmMain.Designer.cs
 │   └── Program.cs
 │
+├── XBIOM.Tests/                  # xUnit tests for calculation logic
+│   ├── CityTests.cs
+│   ├── DiophantineProblemTests.cs
+│   ├── SymbolicRegressionChromosomeTests.cs
+│   ├── SymbolicRegressionEvaluatorTests.cs
+│   └── TspGaProblemTests.cs
+│
 ├── XBIOM.csproj
 └── XBIOM.sln
 ```
@@ -306,6 +313,13 @@ Main NuGet packages:
 
 `NeuronDotNet.Core45` is an older .NET Framework package. The project currently keeps it because the SOM implementation depends on it.
 
+The test project uses:
+
+* `xunit`
+* `Microsoft.NET.Test.Sdk`
+* `xunit.runner.visualstudio`
+* `coverlet.collector`
+
 # 🚀 Running the Application
 
 From the repository root:
@@ -317,6 +331,22 @@ dotnet run --project XBIOM.csproj
 ```
 
 The application can also be opened and run directly from Visual Studio using `XBIOM.sln`.
+
+# 🧪 Testing
+
+Run all tests:
+
+```powershell
+dotnet test XBIOM.sln
+```
+
+The test suite currently covers:
+
+* symbolic regression expression evaluation
+* symbolic regression chromosome fitness, cloning, formatting, and complexity scoring
+* Diophantine equation evaluation and fitness calculation
+* city distance calculation using GPS coordinates
+* TSP GA route distance, fitness, and route formatting
 
 # ⚠️ Current Limitations
 
@@ -337,6 +367,7 @@ Current status:
 - ✅ elapsed time and run status are stored in CSV outputs
 - ✅ long-running GA tasks can be interrupted
 - ✅ symbolic regression uses a custom GA implementation with error and complexity scoring
+- ✅ xUnit test project covers core calculation logic
 
 # License
 
